@@ -219,68 +219,25 @@
   </section>
 
   <section>
-    <h2>Como usar: <em>dois modos</em></h2>
-    <p class="section-lead">O mesmo pacote funciona de dois jeitos. Escolha o seu.</p>
-    <div class="modos">
-      <div class="modo">
-        <h3>No claude.ai</h3>
-        <p class="quem">Para qualquer pessoa, sem instalar nada</p>
-        <ol>
-          <li>Crie uma conta no claude.ai<span>Para publicar a página no final, use um plano pago, o mais básico resolve.</span></li>
-          <li>Ative a busca na web na conversa<span>É ela que faz a pesquisa de mercado de verdade.</span></li>
-          <li>Cole a mensagem de ativação abaixo e envie<span>O Claude lê o pacote e vira o seu assistente na hora.</span></li>
-        </ol>
-        <div class="copybox" id="msg-magica"><button type="button" onclick="copiar(this)">Copiar</button></div>
-      </div>
-      <div class="modo">
-        <h3>No Claude Code</h3>
-        <p class="quem">Para quem já usa o terminal · modo squad</p>
-        <ol>
-          <li>Clone o repositório do squad<span><code class="mini">git clone https://github.com/berdantx/crie-seu-produto-squad.git</code></span></li>
-          <li>Abra o terminal na pasta e rode <code class="mini">claude</code><span>O assistente assume sozinho. Diga oi e comece.</span></li>
-          <li>Trabalhe com o squad<span>Um condutor conversa com você e 8 agentes especialistas produzem as entregas.</span></li>
-        </ol>
-        <p style="color:var(--taupe); font-size:14px; margin-top:18px">Vantagens do modo squad: cada entrega vira arquivo na pasta <code class="mini">producao/</code> (caiu a conversa, retoma do ponto exato) e a página pode ir pro ar com URL própria via <code class="mini">npx vercel producao/</code>.</p>
-      </div>
+    <h2>Como <em>usar</em></h2>
+    <p class="section-lead">Três passos e o assistente assume a conversa com você.</p>
+    <div class="modo">
+      <h3>Copie, cole e comece</h3>
+      <p class="quem">Funciona no Claude do VSCode e no claude.ai</p>
+      <ol>
+        <li>Abra o seu Claude<span>No VSCode com a extensão do Claude Code, ou no claude.ai pelo navegador. Para publicar a página no final, use um plano pago, o mais básico resolve.</span></li>
+        <li>Copie a mensagem de ativação<span>Ela entrega o pacote completo ao Claude e o transforma no seu assistente.</span></li>
+        <li>Cole numa conversa nova e envie<span>O assistente assume na hora e conduz você, uma etapa por vez.</span></li>
+      </ol>
+      <div class="copybox" id="msg-magica"><button type="button" onclick="copiar(this)">Copiar</button></div>
+      <p style="color:var(--taupe); font-size:14px; margin-top:18px">No claude.ai, deixe a busca na web ativada: é ela que faz a pesquisa de mercado de verdade.</p>
     </div>
-  </section>
-
-  <section>
-    <h2>O squad <em>por dentro</em></h2>
-    <p class="section-lead">No modo Claude Code, o trabalho é dividido: o condutor fala com você, os especialistas produzem. Você não precisa chamar ninguém pelo nome, a orquestra toca sozinha.</p>
-    <div class="squad">
-      <div class="agente chief"><span class="etq">Condutor</span><strong>O assistente principal</strong><p>Conduz a conversa, faz as perguntas, aplica os gates de aprovação e despacha os especialistas na hora certa.</p></div>
-      <div class="agente"><span class="etq">Etapa 2</span><strong>pesquisador-de-mercado</strong><p>Pesquisa seu mercado na web, em 9 eixos, e resume o que importa.</p></div>
-      <div class="agente"><span class="etq">Etapa 3</span><strong>gerador-de-ideias</strong><p>Gera as 20 ideias ancoradas na pesquisa.</p></div>
-      <div class="agente"><span class="etq">Etapas 4 e 5</span><strong>arquiteto-de-oferta</strong><p>Formato, faixa de preço e a concepção completa da oferta.</p></div>
-      <div class="agente"><span class="etq">Etapa 6</span><strong>copywriter-da-pagina</strong><p>Escreve a copy com técnica própria e a sua história.</p></div>
-      <div class="agente"><span class="etq">Etapa 8</span><strong>construtor-da-pagina</strong><p>Constrói a página HTML completa, com a sua cara.</p></div>
-      <div class="agente"><span class="etq">Etapa 9</span><strong>criador-de-anuncios</strong><p>Criativos com prompts de imagem para feed e story.</p></div>
-      <div class="agente"><span class="etq">Etapa 10</span><strong>roteirista-vsl</strong><p>Roteiro de vídeo de vendas gravável no celular.</p></div>
-      <div class="agente"><span class="etq">Fechamento</span><strong>projetor-financeiro</strong><p>A projeção de 12 meses com premissas transparentes.</p></div>
-    </div>
-  </section>
-
-  <section>
-    <h2>Chame cada especialista <em>direto</em></h2>
-    <p class="section-lead">Você não precisa refazer a jornada inteira para mexer numa peça. No modo Claude Code, cada etapa tem uma porta de entrada própria: um comando que verifica o que já existe na sua pasta producao/, pergunta só o que faltar e despacha o especialista certo.</p>
-    <div class="squad">
-      <div class="agente"><span class="etq">Etapa 2</span><strong>/pesquisa</strong><p>Roda só a pesquisa de mercado de um nicho. Ex.: <em>/pesquisa marmitas fit</em></p></div>
-      <div class="agente"><span class="etq">Etapa 3</span><strong>/ideias</strong><p>Gera as 20 ideias usando a pesquisa que existir.</p></div>
-      <div class="agente"><span class="etq">Etapas 4 e 5</span><strong>/oferta</strong><p>Formato, preço e concepção completa da oferta.</p></div>
-      <div class="agente"><span class="etq">Etapa 6</span><strong>/copy</strong><p>Escreve a copy nova ou ajusta a que existe, sem perder o que foi aprovado.</p></div>
-      <div class="agente"><span class="etq">Etapa 8</span><strong>/pagina</strong><p>Constrói a página. Tem copy própria? Cole que ele monta com ela.</p></div>
-      <div class="agente"><span class="etq">Etapa 9</span><strong>/anuncios</strong><p>Criativos novos ou variações. Ex.: <em>/anuncios mais 3 versões de story</em></p></div>
-      <div class="agente"><span class="etq">Etapa 10</span><strong>/vsl</strong><p>Roteiro de vídeo de vendas do seu produto.</p></div>
-      <div class="agente"><span class="etq">Fechamento</span><strong>/projecao</strong><p>Projeção de 12 meses com o seu preço real.</p></div>
-    </div>
-    <p style="color:var(--taupe); font-size:14.5px; margin-top:24px">Também funciona em linguagem natural, sem comando: "usa o pesquisador-de-mercado pra pesquisar o mercado de marmitas fit" ou "chama o criador-de-anuncios pra gerar mais variações". No claude.ai, é só pedir a etapa pelo nome que o assistente entende.</p>
   </section>
 
   <section>
     <h2>Três coisas <em>para saber</em></h2>
     <div>
-      <div class="dica"><span class="i">a</span><div><strong>Se travar, destrava fácil</strong><p>Recarregue a página e cole na conversa: "estamos retomando, continua de onde paramos". O assistente lembra tudo. No modo squad, é só abrir a pasta de novo: a jornada está salva em producao/.</p></div></div>
+      <div class="dica"><span class="i">a</span><div><strong>Se travar, destrava fácil</strong><p>Recarregue e cole na conversa: "estamos retomando, continua de onde paramos". O assistente lembra tudo e segue do ponto onde parou.</p></div></div>
       <div class="dica"><span class="i">b</span><div><strong>Responda com sinceridade, não com perfeição</strong><p>Não trave buscando a resposta ideal. O papel do assistente é organizar o que você sabe. A página que sai hoje vale mais que a ideia perfeita que nunca sai do papel.</p></div></div>
       <div class="dica"><span class="i">c</span><div><strong>A primeira versão é o ponto de partida</strong><p>Tudo o que sair pode ser ajustado depois: copy, cores, preço, anúncios. Nada se perde, tudo se melhora.</p></div></div>
     </div>
